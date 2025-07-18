@@ -40,18 +40,19 @@ You can upload documents and enter queries via the UI.
 - Upload a Document
 
 ```bash
-curl -X POST http://localhost:8000/upload \
-  -F 'file=@/path/to/your/policy.pdf'
+curl -X POST "http://localhost:8000/upload" \
+  -H "accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@/Users/harshith/Downloads/dfs/CHOTGDP23004V012223.pdf"
 ```
 
 - Submit a Query
 
 ```bash
-curl -X POST http://localhost:8000/evaluate \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "46-year-old male, knee surgery in Pune, 3-month-old insurance policy"
-}
+curl -X POST "http://localhost:8000/upload" \
+  -H "accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@/Users/harshith/Downloads/dfs/ICIHLIP22012V012223.pdf"
 ```
 
 - Sample Output
