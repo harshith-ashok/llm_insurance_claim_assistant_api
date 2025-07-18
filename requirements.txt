@@ -1,6 +1,10 @@
+
 fastapi
 uvicorn
+python-multipart
+pymupdf
 python-docx
-PyMuPDF
 beautifulsoup4
-pydantic
+faiss-cpu
+sentence-transformers
+httpx
